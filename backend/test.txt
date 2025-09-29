@@ -1,0 +1,6 @@
+Hii Everyone!!
+Welcome to Node.js file systemHello using fs.open!
+Hello using fs.open!
+Hello using fs.open!
+Hello using fs.open!
+Hello using fs.open!
