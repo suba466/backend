@@ -1,0 +1,158 @@
+[
+  {
+    "id": 1,
+    "name": "iPhone 15",
+    "category": "Mobile",
+    "price": 120000
+  },
+  {
+    "id": 2,
+    "name": "Samsung Galaxy S23",
+    "category": "Mobile",
+    "price": 90000
+  },
+  {
+    "id": 3,
+    "name": "Red Saree",
+    "category": "Women",
+    "price": 1200
+  },
+  {
+    "id": 4,
+    "name": "Frok",
+    "category": "Women",
+    "price": 2500
+  },
+  {
+    "id": 5,
+    "name": "Leather Wallet",
+    "category": "Men",
+    "price": 25000
+  },
+  {
+    "id": 6,
+    "name": "Formal Shirt",
+    "category": "Men",
+    "price": 2200
+  },
+  {
+    "id": 7,
+    "name": "Kids Toy Car",
+    "category": "Others",
+    "price": 10000
+  },
+  {
+    "id": 8,
+    "name": "Smart Watch",
+    "category": "Mobile",
+    "price": 130000
+  },
+  {
+    "id": 9,
+    "name": "Noise Cancelling Headphones",
+    "category": "Mobile",
+    "price": 11000
+  },
+  {
+    "id": 10,
+    "name": "Handbag",
+    "category": "Women",
+    "price": 500
+  },
+  {
+    "id": 11,
+    "name": "Running Shoes",
+    "category": "Men",
+    "price": 15800
+  },
+  {
+    "id": 12,
+    "name": "Bluethooh Headphones",
+    "category": "Mobile",
+    "price": 220000
+  },
+  {
+    "id": 13,
+    "name": "Sunglasses",
+    "category": "Others",
+    "price": 100
+  },
+  {
+    "id": 14,
+    "name": "White Kurta",
+    "category": "Men",
+    "price": 3400
+  },
+  {
+    "id": 15,
+    "name": "Black Saree",
+    "category": "Women",
+    "price": 5000
+  },
+  {
+    "id": 16,
+    "name": "Tablet iPad",
+    "category": "Mobile",
+    "price": 233300
+  },
+  {
+    "id": 17,
+    "name": "Gold Necklace",
+    "category": "Women",
+    "price": 450000
+  },
+  {
+    "id": 18,
+    "name": "Gaming Laptop",
+    "category": "Mobile",
+    "price": 180000
+  },
+  {
+    "id": 19,
+    "name": "Formal Trousers",
+    "category": "Men",
+    "price": 1200
+  },
+  {
+    "id": 20,
+    "name": "Wrist Watch",
+    "category": "Others",
+    "price": 1700
+  },
+  {
+    "id": 21,
+    "name": "Sports T-Shirt",
+    "category": "Men",
+    "price": 1700
+  },
+  {
+    "id": 22,
+    "name": "Evening Gown",
+    "category": "Women",
+    "price": 14500
+  },
+  {
+    "id": 23,
+    "name": "Wireless Charger",
+    "category": "Mobile",
+    "price": 145000
+  },
+  {
+    "id": 24,
+    "name": "Backpack",
+    "category": "Others",
+    "price": 1200
+  },
+  {
+    "id": 25,
+    "name": "High Heels",
+    "category": "Women",
+    "price": 150000
+  },
+  {
+    "id": 26,
+    "name": "mobilecase",
+    "category": "Mobile",
+    "price": 700
+  }
+]
