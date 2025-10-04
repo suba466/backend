@@ -154,5 +154,11 @@
     "name": "mobilecase",
     "category": "Mobile",
     "price": 700
+  },
+  {
+    "id": 27,
+    "name": "Apple mobile",
+    "category": "Mobile",
+    "price": 150000
   }
 ]
