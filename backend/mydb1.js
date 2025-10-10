@@ -6,7 +6,6 @@ const app = exp();
 app.use(bd.urlencoded({ extended: true }));
 app.use(bd.json());
 
-
 mongoose.connect("mongodb://localhost:27017/suba")
   .then(() => console.log(" MongoDB connected"))
   .catch((err) => console.error(err));
