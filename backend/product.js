@@ -3,16 +3,28 @@ import cors from "cors";
 import path from "path";
 import mongoose from "mongoose";
 import multer from "multer";
-import { type } from "os";
+import { fileURLToPath } from "url";
+import { title } from "process";
 const app=express();
 const PORT =4000;
-const upload=multer({dest:"upload/"})
+const __filename=fileURLToPath(import.meta.url);
+const __dirname=path.dirname(__filename);
 app.use(cors());
 app.use(express.json());
-app.use("/upload",express.static("upload"));
+app.use("/uploads",express.static(path.join(__dirname,"uploads")));
 mongoose.connect("mongodb://localhost:27017/suba")
 .then(()=>console.log("MongoDB connected"))
 .catch((err)=>console.log("MongoDB not connected: ",err));
+const storage = multer.diskStorage({
+    destination: (req, file, cb) =>
+        cb(null, 'uploads/'), // folder to store uploaded files
+    filename:(req, file, cb) =>
+        cb(null, Date.now() + "-"+file.originalname), // unique name
+    }
+);
+
+const upload = multer({ storage });
+
 const proSchema = new mongoose.Schema(
   {
     title: {
@@ -26,7 +38,7 @@ const proSchema = new mongoose.Schema(
     category: {
       type: String,
       default: "General",
-    }
+    },image:{type:String,default:""}
   },
   {
     timestamps: true,
@@ -47,12 +59,12 @@ const cartSchema=new mongoose.Schema(
 const cartvalue=mongoose.model("cartvalue",cartSchema)
 
 //Add package
-app.post("/api/addpackage",async(req,res)=>{
+app.post("/api/addpackage",upload.single("image"),async(req,res)=>{
     try{
         const newPackage= new pro({
             title:req.body.title,
             price:req.body.price,
-            category:req.body.category,
+            category:req.body.category ||"General",
             image:req.file?req.file.filename:""
      } );
         await newPackage.save();
@@ -72,9 +84,15 @@ app.get("/api/package",async(req,res)=>{
     }
 })
 
-app.put("/api/editpackage/:id",async(req,res)=>{
+app.put("/api/editpackage/:id",upload.single("image"),async(req,res)=>{
     try{
-        const editPackage=await pro.findByIdAndUpdate(req.params.id, req.body,{new:true})
+        const updatedData={
+            title:req.body.title,
+            price:req.body.price,
+            category:req.body.category,
+        };
+        if(req.file) updatedData.image=req.file.filename;
+        const editPackage=await pro.findByIdAndUpdate(req.params.id, updatedData,{new:true})
         res.json({msg:"Package updated successfully",pro:editPackage})
     }catch(err){
         res.json({err:"Falied"});
